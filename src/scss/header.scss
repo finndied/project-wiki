@@ -156,6 +156,11 @@
 	&__category {
 		font-size: rem(18);
 		transition: all 0.3s ease-in 0s;
+		@media (any-hover: hover){
+			&:hover{
+				color: #000;
+			}
+		}
 		@include adaptiveValue("font-size", 18, 14, 1920, 992, 1);
 
 		@media (min-width: $tablet) {
