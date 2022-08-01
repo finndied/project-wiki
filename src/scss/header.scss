@@ -6,6 +6,13 @@
 		display: flex;
 		align-items: flex-start;
 	}
+	&__actions {
+		padding: rem(25) rem(10);
+		display: flex;
+		justify-content: end;
+		align-items: flex-end;
+	}
+
 
 	&__logo {
 		position: relative;
@@ -19,6 +26,7 @@
 .menu {
 	padding: 0 0 0 rem(30);
 	&__icon {
+		align-items: flex-end;
 	}
 
 	&__body {
@@ -32,7 +40,8 @@
 			left: -100%;
 			transition: all 0.3s ease 0s;
 			overflow: auto;
-			background-color: black;
+			background-color: $redColor;
+			
 			&::before{
 				content:'';
 				position: fixed;
@@ -40,9 +49,14 @@
 				left: -100%;
 				transition: all 0.3s ease 0s;
 				width: 100%;
-				@include adaptiveValue("height", 105, 72, 768, 320, 2);
 				background-color: black;
 				z-index: 2;
+			}
+			.menu-open &{
+				left: 0;
+				&::before{
+					left: 0;
+				}
 			}
 		}
 	}
@@ -52,13 +66,13 @@
 		justify-content: end;
 		align-items: flex-end;
 		flex-wrap: wrap;
-		gap: rem(60);
 		@include adaptiveValue("gap", 60, 20);
 		padding: rem(31) rem(10) 0 0;
 		@media (max-width: $mobile) {
-			padding: rem(25) rem(10) 0 0;
+			padding: rem(105) rem(10) 0 0;
 			flex-direction: column;
 			text-align: center;
+			align-items: center;
 			
 		}
 	}
@@ -70,10 +84,18 @@
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 36, 30);
 		}
+		transition: all 0.3s ease-in 0s;
+		&:hover{
+			color: $redColor;
+			//border-bottom: 5px solid $redColor;
+			transform: scale(1.1);
+		}
 	}
 }
-.icon-menu {
-}
+
+
+
+	
 
 //====================================================================================================
 
@@ -82,7 +104,7 @@
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
-		display: block;
+		display: flex;
 		position: relative;
 		width: rem(30);
 		height: rem(18);
