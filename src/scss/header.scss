@@ -13,7 +13,6 @@
 		align-items: flex-end;
 	}
 
-
 	&__logo {
 		position: relative;
 		z-index: 5;
@@ -30,7 +29,7 @@
 	}
 
 	&__body {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			position: fixed;
 			display: flex;
 			flex-direction: column;
@@ -41,9 +40,9 @@
 			transition: all 0.3s ease 0s;
 			overflow: auto;
 			background-color: $redColor;
-			
-			&::before{
-				content:'';
+
+			&::before {
+				content: "";
 				position: fixed;
 				top: 0;
 				left: -100%;
@@ -52,9 +51,9 @@
 				background-color: black;
 				z-index: 2;
 			}
-			.menu-open &{
+			.menu-open & {
 				left: 0;
-				&::before{
+				&::before {
 					left: 0;
 				}
 			}
@@ -68,12 +67,11 @@
 		flex-wrap: wrap;
 		@include adaptiveValue("gap", 60, 20);
 		padding: rem(31) rem(10) 0 0;
-		@media (max-width: $mobile) {
-			padding: rem(105) rem(10) 0 0;
+		@media (max-width: $tablet) {
+			padding: rem(157) rem(10) 0 0;
 			flex-direction: column;
 			text-align: center;
 			align-items: center;
-			
 		}
 	}
 
@@ -84,18 +82,102 @@
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 36, 30);
 		}
-		transition: all 0.3s ease-in 0s;
-		&:hover{
+		transition: all 0.2s ease-in 0s;
+
+		&:hover {
 			color: $redColor;
-			//border-bottom: 5px solid $redColor;
-			transform: scale(1.1);
+
+			&:hover {
+				text-shadow: 0px 0 4px #000, 0 1px 12px #000, -1px 0 1px #000;
+			}
 		}
 	}
 }
 
+//========================================================================================================================================================
 
 
-	
+.sub-menu-catalog {
+	padding-top: rem(20);
+	z-index: 100;
+	@media (max-width: $tablet) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: $redColor;
+		padding: rem(25) rem(15) rem(50) rem(15);
+		transition: left 0.3s ease 0s;
+		.sub-menu-open & {
+			display: block;
+			left: 0;
+			z-index: 6;
+		}
+	}
+	&__back {
+		display: none;
+		@media (max-width: $tablet) {
+			margin: 0 auto;
+			display: block;
+			margin-top: rem(15);
+			font-size: rem(24);
+		}
+	}
+	&__container {
+		background-color: $redColor;
+		border-radius: rem(50);
+	}
+
+	.berserk-image {
+		width: rem(200);
+		object-fit: cover;
+		opacity: 0.08;
+	}
+
+	&__block {
+		display: none;
+
+		&._sub-menu-open {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			@media (max-width: $tablet) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: rem(35) 0 0 0;
+			}
+		}
+	}
+
+	&__category {
+		font-size: rem(18);
+		transition: all 0.3s ease-in 0s;
+		@include adaptiveValue("font-size", 18, 14, 1920, 992, 1);
+
+		@media (min-width: $tablet) {
+			font-weight: 700;
+			padding: rem(30) rem(15) rem(30) 0px;
+		}
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: em(25, 16);
+			}
+		}
+	}
+
+	&__link-category {
+		@media (max-width: $tablet) {
+			font-size: rem(24);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+	}
+}
 
 //====================================================================================================
 
@@ -103,7 +185,7 @@
 
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: flex;
 		position: relative;
 		width: rem(30);
