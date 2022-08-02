@@ -56,7 +56,6 @@
       display: block;
       max-width: 100%;
       max-height: 100%;
-      
    }
 
    &__title {
@@ -139,6 +138,7 @@
       height: rem(40);
       font-weight: 700;
       flex-wrap: wrap;
+      z-index: 122;
    }
 
    &__subtitle {
@@ -148,9 +148,11 @@
       font-weight: 700;
       flex-wrap: wrap;
       font-size: rem(27);
-      z-index: -1;
       line-height: 1.5;
-      span {
+      @media (max-width:$tablet){
+         z-index: -1;
+      }
+      a {
          color: $redColor;
          @media (any-hover: hover) {
             &:hover {
@@ -168,8 +170,11 @@
       position: absolute;
       z-index: -1;
       opacity: 0.2;
-      top: 0; right: 0; bottom: 0; left: 0;
-      @media (max-width:$tablet){
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @media (max-width: $tablet) {
          width: 100%;
       }
    }
@@ -194,29 +199,25 @@
       text-transform: uppercase;
       font-size: rem(18);
       line-height: 0.7;
-      padding: rem(20);
+      padding: rem(15);
       background-color: $redColor;
-      height: rem(50);
       width: 100%;
       border-radius: rem(90);
    }
-   span{
+   span {
       color: $redColor;
       text-transform: uppercase;
    }
    &__body {
    }
-   
 }
-
 
 //========================================================================================================================================================
 
 .meaning-block {
-
    &__container {
    }
-   
+
    &__chapter {
       display: flex;
       justify-content: center;
@@ -249,17 +250,16 @@
       position: absolute;
       z-index: -1;
       opacity: 0.2;
-      
-      @media (max-width:$tablet){
+
+      @media (max-width: $tablet) {
          width: 100%;
+      }
    }
-}
 }
 
 //========================================================================================================================================================
 
 .soundtrack-block {
-
    &__container {
    }
 
@@ -292,16 +292,17 @@
 
    &__subtitle {
       text-align: center;
-      font-size: rem(25);
+      font-size: rem(27);
       color: #c62437;
+      font-weight: 700;
       margin-bottom: rem(30);
+      text-transform: lowercase;
    }
-	&__audio {
+   &__audio {
       display: flex;
       flex-direction: column;
       margin-bottom: rem(30);
       align-items: center;
       gap: rem(30);
-		}
-
+   }
 }
