@@ -148,6 +148,7 @@
       font-weight: 700;
       flex-wrap: wrap;
       font-size: rem(27);
+      z-index: -1;
       line-height: 1.5;
       span {
          color: $redColor;
@@ -199,7 +200,10 @@
       width: 100%;
       border-radius: rem(90);
    }
-
+   span{
+      color: $redColor;
+      text-transform: uppercase;
+   }
    &__body {
    }
    
