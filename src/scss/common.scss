@@ -90,10 +90,9 @@
 
 .spollers {
    &__item {
-     
    }
 
-   &__content{
+   &__content {
       padding-top: rem(30);
       align-items: center;
       gap: rem(30);
@@ -101,7 +100,7 @@
       display: flex;
       flex-wrap: wrap;
       font-size: rem(20);
-      span{
+      span {
          color: $redColor;
       }
    }
@@ -109,26 +108,22 @@
    &__title {
       border: 4px solid #fff;
       border-radius: rem(5);
-      border-style:outset;
+      border-style: outset;
    }
 
    &__body {
       max-width: rem(340);
       text-align: center;
-      
    }
 }
 
-
 //========================================================================================================================================================
 
-.srory-block {
-
+.story-block {
    &__container {
    }
 }
 .story-block {
-
    &__chapter {
       display: flex;
       justify-content: center;
@@ -146,10 +141,10 @@
       height: rem(40);
       font-weight: 700;
       flex-wrap: wrap;
-      
    }
 
    &__subtitle {
+      position: relative;
       text-align: center;
       margin: rem(40) 0 rem(100);
       font-weight: 700;
@@ -161,9 +156,22 @@
          @media (any-hover: hover) {
             &:hover {
                color: #993d48;
-               
             }
          }
+      }
+   }
+
+   .image-behelit {
+      display: block;
+      margin: 0 auto;
+      width: 40%;
+      object-fit: contain;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.2;
+      top: 0; right: 0; bottom: 0; left: 0;
+      @media (max-width:$tablet){
+         width: 100%;
       }
    }
 
@@ -173,21 +181,19 @@
       padding: rem(0) 0 rem(30) rem(0);
       font-size: rem(24);
       line-height: 1.3;
-      
    }
 }
 
 .spollers-story {
-display: flex;
-      justify-content: center;
-      
+   display: flex;
+   justify-content: center;
+
    &__item {
-      
    }
 
    &__title {
       text-transform: uppercase;
-      font-size: rem(20);
+      font-size: rem(18);
       line-height: 0.7;
       padding: rem(20);
       background-color: $redColor;
@@ -197,5 +203,18 @@ display: flex;
    }
 
    &__body {
+   }
+   .image-guts {
+      display: block;
+      margin-right: 0 auto;
+      width: 30%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+      top: 0; right: 0; bottom: 0; left: 0;
+      @media (max-width:$tablet){
+         width: 100%;
+      }
    }
 }
