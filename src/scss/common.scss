@@ -1,1 +1,63 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.page {
+   &__creator {
+   }
+}
+.creator-block {
+   &__container {
+   }
+
+   &__chapter {
+      display: flex;
+      justify-content: center;
+      padding: rem(40);
+      font-size: rem(24);
+   }
+
+   &__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: rem(40) 0;
+      font-size: rem(20);
+      background-color: $redColor;
+      height: rem(40);
+      font-weight: 700;
+      flex-wrap: wrap;
+   }
+
+   &__image {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      border: 3px solid #fff;
+
+   }
+
+   &__text {
+      position: relative;
+      padding: rem(0) 0 rem(40) rem(0);
+      font-size: rem(24);
+   }
+}
+
+
+//========================================================================================================================================================
+.page {
+
+   &__characters {
+      
+   }
+}
+.characters-block {
+
+   &__container {
+   }
+
+   &__image-character {
+      display:block;
+      margin: 0 auto;
+      width: 100%
+   }
+}
