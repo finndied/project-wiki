@@ -1,6 +1,26 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .page {
+   .scroll-top {
+      width: rem(30);
+      height: rem(30);
+      display: flex;
+      justify-content: end;
+      background-color: $redColor;
+      border-radius: rem(21);
+      position: fixed;
+      bottom: 4%;
+      right: 1%;
+      opacity: 0.4;
+      cursor: pointer;
+      @media (max-width:$mobile){
+          opacity: 0.2;
+          bottom: 2%; 
+      }
+   }
+   .arrow{
+      padding: 0 rem(1) rem(3) 0;
+   }
    &__creator {
    }
 }
@@ -33,7 +53,6 @@
    }
 
    &__title {
-      
       display: flex;
       justify-content: center;
       align-items: center;
@@ -335,4 +354,3 @@
    color: #fff;
    font-weight: 700;
 }
-
