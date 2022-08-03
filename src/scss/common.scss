@@ -149,7 +149,7 @@
       flex-wrap: wrap;
       font-size: rem(27);
       line-height: 1.5;
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
          z-index: -1;
       }
       a {
@@ -295,14 +295,26 @@
       font-size: rem(22);
       color: #c62437;
       font-weight: 700;
+      line-height: 1.3;
       margin-bottom: rem(30);
-     
-   }
-   &__audio {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: rem(30);
-      align-items: center;
-      gap: rem(30);
    }
 }
+
+.audio-content {
+   padding: rem(30) 0;
+   display: flex;
+   position: relative;
+   justify-content: center;
+   margin: 0 auto;
+   column-width: 14em;
+   column-gap: 2em;
+   max-width: 70%;
+   gap: rem(90);
+   column-rule: 1px solid rgb(255, 255, 255);
+   flex-wrap: wrap;
+   text-transform: uppercase;
+   font-size: rem(18);
+   color: #fff;
+   font-weight: 700;
+}
+
