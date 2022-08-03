@@ -4,7 +4,7 @@
 
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap);
 
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,regular,700" rel="stylesheet"/>
+
 
 @charset "UTF-8";
 
@@ -169,6 +169,17 @@ body {
 
 .page .arrow {
   padding: 0 0.0625rem 0.1875rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  border-radius: 1.3125rem;
+  position: fixed;
+  bottom: 4%;
+  right: 1%;
+  opacity: 0.4;
 }
 
 .creator-block__chapter {
@@ -181,6 +192,7 @@ body {
   padding: 2.5rem 0;
   font-size: 1.5rem;
   position: relative;
+  z-index: -1;
 }
 
 .creator-block .image-berserk {
